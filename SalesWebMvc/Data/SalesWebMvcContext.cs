@@ -18,6 +18,8 @@ namespace SalesWebMvc.Data
 
         // DbSets
         public DbSet<Department> Department { get; set; }
+        public DbSet<Sale> SalesRecord { get; set; }
+        public DbSet<Seller> Seller { get; set; }
 
 
         // Overrides

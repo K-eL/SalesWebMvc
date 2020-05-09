@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SalesWebMvc.Data;
 
 namespace SalesWebMvc.Migrations
 {
     [DbContext(typeof(SalesWebMvcContext))]
-    partial class SalesWebMvcContextModelSnapshot : ModelSnapshot
+    [Migration("20200509204753_SaleEntityNameFix")]
+    partial class SaleEntityNameFix
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -34,7 +36,7 @@ namespace SalesWebMvc.Migrations
                     b.ToTable("Departments");
                 });
 
-            modelBuilder.Entity("SalesWebMvc.Models.Sale", b =>
+            modelBuilder.Entity("SalesWebMvc.Models.SaleRecord", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -89,7 +91,7 @@ namespace SalesWebMvc.Migrations
                     b.ToTable("Seller");
                 });
 
-            modelBuilder.Entity("SalesWebMvc.Models.Sale", b =>
+            modelBuilder.Entity("SalesWebMvc.Models.SaleRecord", b =>
                 {
                     b.HasOne("SalesWebMvc.Models.Seller", "Seller")
                         .WithMany("Sales")
