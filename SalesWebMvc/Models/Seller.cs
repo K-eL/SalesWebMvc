@@ -8,7 +8,7 @@ namespace SalesWebMvc.Models
     {
 
         public int Id { get; set; }
-        public int Name { get; set; }
+        public string Name { get; set; }
         public string Email { get; set; }
         public DateTime BirthDate { get; set; }
         public double BaseSalary { get; set; }
@@ -19,7 +19,7 @@ namespace SalesWebMvc.Models
         {
         }
 
-        public Seller(int id, int name, string email, DateTime birthDate, double baseSalary, Department department)
+        public Seller(int id, string name, string email, DateTime birthDate, double baseSalary, Department department)
         {
             Id = id;
             Name = name;
@@ -39,7 +39,7 @@ namespace SalesWebMvc.Models
             Sales.Remove(saleRecord);
         }
 
-        public double TotalSales(DateTime initialDate, DateTime finalDate)
+        public double GetTotalSalesAmoutByPeriod(DateTime initialDate, DateTime finalDate)
         {
             return Sales.Where(sr => sr.Date >= initialDate && sr.Date <= finalDate).Sum(sr => sr.Amount);
         }

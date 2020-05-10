@@ -28,9 +28,9 @@ namespace SalesWebMvc.Models
             Sellers.Add(seller);
         }
 
-        public double TotalSales(DateTime initialDate, DateTime finalDate)
+        public double GetTotalSalesAmountByPeriod(DateTime initialDate, DateTime finalDate)
         {
-            return Sellers.Sum(seller => seller.TotalSales(initialDate,finalDate));
+            return Sellers.Sum(seller => seller.GetTotalSalesAmoutByPeriod(initialDate,finalDate));
         }
     }
 }
