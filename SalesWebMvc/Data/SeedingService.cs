@@ -53,7 +53,7 @@ namespace SalesWebMvc.Data
                 Email = "mariagreen@gmail.com",
                 BirthDate = new DateTime(1979, 12, 31),
                 BaseSalary = 1050.0,
-                Department = d1
+                Department = d2
             };
             Seller s3 = new Seller
             {
@@ -61,7 +61,7 @@ namespace SalesWebMvc.Data
                 Email = "alexgray@gmail.com",
                 BirthDate = new DateTime(1988, 1, 15),
                 BaseSalary = 970.0,
-                Department = d1
+                Department = d2
             };
             Seller s4 = new Seller
             {
@@ -77,7 +77,7 @@ namespace SalesWebMvc.Data
                 Email = "donaldblue@gmail.com",
                 BirthDate = new DateTime(2000, 1, 9),
                 BaseSalary = 870.0,
-                Department = d1
+                Department = d4
             };
             Seller s6 = new Seller
             {
@@ -85,7 +85,7 @@ namespace SalesWebMvc.Data
                 Email = "jainapink@gmail.com",
                 BirthDate = new DateTime(1997, 3, 4),
                 BaseSalary = 1110.0,
-                Department = d1
+                Department = d3
             };
 
             _context.Seller.AddRange(s1, s2, s3, s4, s5, s6);

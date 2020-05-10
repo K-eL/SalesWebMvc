@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 
 namespace SalesWebMvc.Models
@@ -12,7 +13,9 @@ namespace SalesWebMvc.Models
         public string Email { get; set; }
         public DateTime BirthDate { get; set; }
         public double BaseSalary { get; set; }
+        //[NotNull] - not sure if I can use it here with the same results as DepartmentId
         public Department Department { get; set; }
+        public int DepartmentId { get; set; } //created just to guarantee that Department can't be null.
         public List<Sale> Sales { get; set; } = new List<Sale>();
 
         public Seller()
